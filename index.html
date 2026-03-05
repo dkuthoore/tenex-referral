@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenex Referral Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        tenex: {
+                            yellow: '#ffe503', /* Matches the requested yellow */
+                            dark: '#050505',
+                            gray: '#888888',
+                            border: '#333333',
+                            panel: '#111111'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .pixel-text {
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: -2px;
+            text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.3);
+        }
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col selection:bg-tenex-yellow selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="w-full border-b border-tenex-border/60 py-5 px-8 flex justify-between items-center bg-black/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="Tenex" class="h-8 w-auto" />
+            <span class="font-bold text-3xl tracking-tight leading-none">Tenex</span>
+        </div>
+        <button class="flex flex-col gap-1.5 p-2 hover:opacity-70 transition-opacity" aria-label="Menu">
+            <div class="w-6 h-[1px] bg-white"></div>
+            <div class="w-6 h-[1px] bg-white"></div>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex flex-col items-center pt-32 pb-16 px-6 max-w-6xl mx-auto w-full">
+        <div class="text-center space-y-12 max-w-5xl">
+            <h1 class="text-5xl md:text-7xl font-serif tracking-tight leading-[1.1]">
+                <span class="text-tenex-yellow">Make $10,000</span> <span class="text-white">per referral.</span>
+            </h1>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left pt-2">
+                <div>
+                    <div class="text-tenex-yellow font-serif text-3xl mb-3 italic">01</div>
+                    <h3 class="font-semibold text-white text-lg mb-2"> Refer a candidate</h3>
+                    <p class="text-sm text-white leading-relaxed">Refer a talented friend to one of our open roles</p>
+                </div>
+                <div>
+                    <div class="text-tenex-yellow font-serif text-3xl mb-3 italic">02</div>
+                    <h3 class="font-semibold text-white text-lg mb-2">They apply</h3>
+                    <p class="text-sm text-white leading-relaxed">If they're a fit, we get them straight into the interview process.</p>
+                </div>
+                <div>
+                    <div class="text-tenex-yellow font-serif text-3xl mb-3 italic">03</div>
+                    <h3 class="font-semibold text-white text-lg mb-2">We hire them</h3>
+                    <p class="text-sm text-white leading-relaxed">They crush the interview process, sign the offer, and join the team at Tenex.</p>
+                </div>
+                <div>
+                    <div class="text-tenex-yellow font-serif text-3xl mb-3 italic">04</div>
+                    <h3 class="font-semibold text-white text-lg mb-2">90 days pass</h3>
+                    <p class="text-sm text-white leading-relaxed">Once they hit their 90th day, we send you $10,000. Easiest side hustle ever.</p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#roles" class="bg-white text-black px-8 py-4 text-sm font-semibold flex items-center gap-2 hover:bg-gray-200 transition-colors w-full sm:w-auto justify-center">
+                    View Open Roles
+                </a>
+                <a href="#leaderboard" class="border border-tenex-border text-tenex-yellow px-8 py-4 text-sm font-semibold flex items-center gap-2 hover:border-white transition-colors w-full sm:w-auto justify-center">
+                    View Referral Leaderboard
+                </a>
+            </div>
+        </div>
+
+        <!-- Open Roles -->
+        <div id="roles" class="w-full mt-40 scroll-mt-24">
+            <div class="flex justify-between items-end mb-10 border-b border-tenex-border pb-6">
+                <div>
+                    <h2 class="text-4xl font-medium mb-2">Open Roles</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Role Card 1 -->
+                <div class="border border-tenex-border bg-tenex-panel/20 hover:border-tenex-gray transition-all group flex flex-col justify-between h-full">
+                    <div class="p-8 pb-6 block flex-grow">
+                        <div class="text-xs text-tenex-gray uppercase tracking-wider mb-5 flex gap-2 items-center font-medium">
+                            <span>Operations</span> <span class="text-tenex-border">•</span> <span>US</span> <span class="text-tenex-border">•</span> <span>Full-Time</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-tenex-yellow transition-colors">Chief of Staff, Commercial</h3>
+                        <p class="text-sm text-tenex-gray leading-relaxed">$100K - $180K • NYC-Based</p>
+                    </div>
+                    <div class="px-8 pb-8 flex gap-3">
+                        <a href="https://jobs.ashbyhq.com/tenexlabs/ce5ac3fa-7e56-44e1-a56c-d4de7bcd0c96" target="_blank" class="flex items-center justify-center gap-1.5 text-sm font-bold bg-tenex-yellow text-black px-6 py-4 hover:bg-white transition-all">
+                            <span>Details</span> <span class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                        </a>
+                        <a href="https://form.typeform.com/to/ip7jUF2h" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center text-sm font-bold border border-tenex-border p-4 hover:bg-white hover:text-black transition-all">
+                            Refer Candidate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role Card 2 -->
+                <div class="border border-tenex-border bg-tenex-panel/20 hover:border-tenex-gray transition-all group flex flex-col justify-between h-full">
+                    <div class="p-8 pb-6 block flex-grow">
+                        <div class="text-xs text-tenex-gray uppercase tracking-wider mb-5 flex gap-2 items-center font-medium">
+                            <span>Strategy</span> <span class="text-tenex-border">•</span> <span>US</span> <span class="text-tenex-border">•</span> <span>Full-Time</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-tenex-yellow transition-colors">AI Strategist</h3>
+                        <p class="text-sm text-tenex-gray leading-relaxed">$150K - $180K • NYC-Based</p>
+                    </div>
+                    <div class="px-8 pb-8 flex gap-3">
+                        <a href="https://jobs.ashbyhq.com/tenexlabs/4a54ffa2-e6bc-4912-8d0a-e568dc49ff40" target="_blank" class="flex items-center justify-center gap-1.5 text-sm font-bold bg-tenex-yellow text-black px-6 py-4 hover:bg-white transition-all">
+                            <span>Details</span> <span class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                        </a>
+                        <a href="https://form.typeform.com/to/ip7jUF2h" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center text-sm font-bold border border-tenex-border p-4 hover:bg-white hover:text-black transition-all">
+                            Refer Candidate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Role Card 3 -->
+                <div class="border border-tenex-border bg-tenex-panel/20 hover:border-tenex-gray transition-all group flex flex-col justify-between h-full">
+                    <div class="p-8 pb-6 block flex-grow">
+                        <div class="text-xs text-tenex-gray uppercase tracking-wider mb-5 flex gap-2 items-center font-medium mt-1">
+                            <span>Engineering</span> <span class="text-tenex-border">•</span> <span>US</span> <span class="text-tenex-border">•</span> <span>Full-Time</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-tenex-yellow transition-colors">Forward Deployed Engineer</h3>
+                        <p class="text-sm text-tenex-gray leading-relaxed">$180K • NYC-Based • Uncapped, Commission-Based</p>
+                    </div>
+                    <div class="px-8 pb-8 flex gap-3">
+                        <a href="https://jobs.ashbyhq.com/tenexlabs/804ccd47-203b-4b1b-a642-ff585285b3be" target="_blank" class="flex items-center justify-center gap-1.5 text-sm font-bold bg-tenex-yellow text-black px-6 py-4 hover:bg-white transition-all">
+                            <span>Details</span> <span class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                        </a>
+                        <a href="https://form.typeform.com/to/ip7jUF2h" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center text-sm font-bold border border-tenex-border p-4 hover:bg-white hover:text-black transition-all">
+                            Refer Candidate
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard" class="w-full mt-40 mb-24 scroll-mt-24">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-4 border-b border-tenex-border pb-6">
+                <div>
+                    <h2 class="text-4xl font-medium mb-2">The Leaderboard</h2>
+                    <p class="text-tenex-gray text-lg">Top referrer by year-end gets sent on a baller vacation.</p>
+                </div>
+            </div>
+
+            <div class="w-full border border-tenex-border overflow-hidden bg-tenex-panel/20">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-black text-xs uppercase tracking-widest text-tenex-gray border-b border-tenex-border">
+                            <th class="py-5 px-8 font-medium w-24">Rank</th>
+                            <th class="py-5 px-8 font-medium">Referrer</th>
+                            <th class="py-5 px-8 font-medium text-right">Successful Hires</th>
+                            <th class="py-5 px-8 font-medium text-right">Bounty Earned</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <!-- Top Spot -->
+                        <tr class="border-b border-tenex-border bg-[#1a1700] hover:bg-[#262200] transition-colors">
+                            <td class="py-5 px-8 text-tenex-yellow font-serif text-2xl">🥇</td>
+                            <td class="py-5 px-8 font-medium text-white flex items-center gap-3 text-lg">
+                                Sarah J.
+                            </td>
+                            <td class="py-5 px-8 text-right font-medium text-lg">4</td>
+                            <td class="py-5 px-8 text-right text-tenex-yellow font-mono text-lg">$40,000</td>
+                        </tr>
+                        <!-- Second Spot -->
+                        <tr class="border-b border-tenex-border hover:bg-tenex-panel/50 transition-colors">
+                            <td class="py-5 px-8 text-tenex-gray font-serif text-xl">🥈</td>
+                            <td class="py-5 px-8 font-medium text-base">Michael T.</td>
+                            <td class="py-5 px-8 text-right text-tenex-gray text-base">3</td>
+                            <td class="py-5 px-8 text-right font-mono text-base text-gray-300">$30,000</td>
+                        </tr>
+                        <!-- Third Spot -->
+                        <tr class="border-b border-tenex-border hover:bg-tenex-panel/50 transition-colors">
+                            <td class="py-5 px-8 text-tenex-gray font-serif text-xl">🥉</td>
+                            <td class="py-5 px-8 font-medium text-base">Alex R.</td>
+                            <td class="py-5 px-8 text-right text-tenex-gray text-base">1</td>
+                            <td class="py-5 px-8 text-right font-mono text-base text-gray-300">$10,000</td>
+                        </tr>
+                        <!-- Fourth Spot -->
+                        <tr class="border-b border-tenex-border hover:bg-tenex-panel/50 transition-colors">
+                            <td class="py-5 px-8 text-tenex-gray font-serif text-xl italic">#4</td>
+                            <td class="py-5 px-8 font-medium text-base">David L.</td>
+                            <td class="py-5 px-8 text-right text-tenex-gray text-base">1</td>
+                            <td class="py-5 px-8 text-right font-mono text-base text-gray-300">$10,000</td>
+                        </tr>
+                        <!-- Fifth Spot -->
+                        <tr class="hover:bg-tenex-panel/50 transition-colors">
+                            <td class="py-5 px-8 text-tenex-gray font-serif text-xl italic">#5</td>
+                            <td class="py-5 px-8 font-medium text-base">Emily W.</td>
+                            <td class="py-5 px-8 text-right text-tenex-gray text-base">1</td>
+                            <td class="py-5 px-8 text-right font-mono text-base text-gray-300">$10,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-tenex-border py-8 text-center text-xs text-tenex-gray">
+        <div class="flex items-center justify-center gap-2 text-tenex-gray mb-2 font-bold tracking-tighter text-lg">
+            <img src="assets/logo.png" alt="Tenex" class="h-6 w-auto opacity-80" />
+            <span>Tenex</span>
+        </div>
+        <p>Built by Damian Kuthoore, aspiring Forward Deployed Engineer</p>
+    </footer>
+
+    <!-- Simple Form Modal UI -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-[#0a0a0a] border border-tenex-border w-full max-w-lg p-8 relative max-h-[95vh] overflow-y-auto">
+            <button onclick="document.getElementById('modal-overlay').classList.add('hidden')" class="absolute top-4 right-4 text-tenex-gray hover:text-white text-xl">&times;</button>
+            <h3 class="text-2xl font-medium mb-2">Refer a Candidate</h3>
+            <p class="text-sm text-tenex-gray mb-6">Submit their info below. If hired, you earn $10,000.</p>
+            
+            <form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('modal-overlay').classList.add('hidden');">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Your Name</label>
+                        <input type="text" class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Your Email</label>
+                        <input type="email" class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm" placeholder="john@example.com" required>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Candidate Name</label>
+                        <input type="text" class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm" placeholder="Jane Smith" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Candidate Email</label>
+                        <input type="email" class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm" placeholder="jane@example.com" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Position</label>
+                    <select class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm appearance-none cursor-pointer" required>
+                        <option value="" disabled selected>Select a role...</option>
+                        <option value="Chief of Staff, Commercial">Chief of Staff, Commercial</option>
+                        <option value="AI Strategist">AI Strategist</option>
+                        <option value="Forward Deployed Engineer">Forward Deployed Engineer</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest text-tenex-gray mb-1">Why you think they are a great fit</label>
+                    <textarea class="w-full bg-black border border-tenex-border p-3 text-white focus:outline-none focus:border-tenex-yellow transition-colors text-sm resize-none h-24" placeholder="Briefly explain why this candidate is a top-tier fit for this specific role..." required></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-white text-black font-bold py-4 mt-2 hover:bg-tenex-yellow transition-colors text-sm uppercase tracking-wider">
+                    Submit Referral
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
