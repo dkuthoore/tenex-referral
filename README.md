@@ -1,6 +1,6 @@
-# Tenex Referral Network — Prototype
+# Tenex Referral Prototype
 
----
+URL: https://dkuthoore.github.io/tenex-referral/
 
 ## Context
 
