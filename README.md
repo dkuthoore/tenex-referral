@@ -4,7 +4,7 @@
 
 ## Context
 
-I saw the [tweet] (https://x.com/businessbarista/status/2029023626104656098) about the referral program and the plans for the future. I wanted to start my application for the Forward Deployed Engineer position by completing my first couple story points :) 
+I saw the [tweet](https://x.com/businessbarista/status/2029023626104656098) about the referral program and the plans for the future. I wanted to start my application for the Forward Deployed Engineer position by completing my first couple story points :) 
 
 ---
 
